@@ -1,10 +1,23 @@
-\documentclass{article}
-\usepackage{ctex}
-\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=2.5cm]{geometry}
+\documentclass[zihao=-4, linespread=1.0]{ctexrep}
+\usepackage[a4paper, top=30mm, bottom=25mm, left=25mm, right=25mm, head=5mm, headsep=5mm, foot=0mm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
 \pagestyle{fancy}
-\fancyhead[C]{\lishu 井冈山大学电子与信息工程学院毕业论文（设计）}
+\pagenumbering{Roman}
+\fancyhead[C]{\small \lishu 井冈山大学电子与信息工程学院毕业论文（设计）}
 
 \begin{document}
-\rightline{\Large 密级：\underline{\hbox to 2.5cm{}}}
+\rightline{\zihao{4} 密级：\underline{\hbox to 2.5cm{}}}
+\vspace{14pt}
+\begin{center}
+    \includegraphics[width=7.7cm]{emblem.png}
+\end{center}
+\vspace{36pt}
+\begin{center}
+    \fontsize{30pt}{36pt} \textbf{本科毕业论文（设计）}
+\end{center}
+\vspace{45pt}
 \end{document}
