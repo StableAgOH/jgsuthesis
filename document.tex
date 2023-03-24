@@ -1,23 +1,62 @@
-\documentclass[zihao=-4, linespread=1.0]{ctexrep}
-\usepackage[a4paper, top=30mm, bottom=25mm, left=25mm, right=25mm, head=5mm, headsep=5mm, foot=0mm]{geometry}
+\documentclass[zihao=-4]{ctexart}
+\usepackage[
+    a4paper,
+    top=20mm, bottom=22mm, left=25mm, right=25mm,
+    head=5.3mm, headsep=7.8mm, includeheadfoot
+]{geometry}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lineno}
+\usepackage{centerlastline}
 
 \setmainfont{Times New Roman}
-\setCJKmainfont{SimSun}
+\setCJKmainfont[AutoFakeBold={1.3}]{SimSun}
 \pagestyle{fancy}
 \pagenumbering{Roman}
-\fancyhead[C]{\small \lishu 井冈山大学电子与信息工程学院毕业论文（设计）}
+\fancyhead[C]{\zihao{5} \lishu 井冈山大学电子与信息工程学院毕业论文（设计）}
+\fancyfoot[C]{\zihao{-5} \thepage}
+\renewcommand\headrulewidth{0.5pt}
 
 \begin{document}
-\rightline{\zihao{4} 密级：\underline{\hbox to 2.5cm{}}}
-\vspace{14pt}
-\begin{center}
-    \includegraphics[width=7.7cm]{emblem.png}
-\end{center}
-\vspace{36pt}
-\begin{center}
-    \fontsize{30pt}{36pt} \textbf{本科毕业论文（设计）}
-\end{center}
-\vspace{45pt}
+\rightline{\zihao{4}密级：\underline{\makebox[22.5mm]{}}\hspace{4.3mm}}
+
+\vspace{12mm}\hspace{33.9mm}\includegraphics[scale=0.1245]{emblem.png}
+
+\vspace{20.3mm}\hspace{18.4mm}\fontsize{30.1pt}{36.12pt}\textbf{本科毕业论文（设计）}
+
+\zihao{-3}
+\newlength{\TitleWidth}
+\setlength{\TitleWidth}{108.5mm}
+\newlength{\UnderLineDepth}
+\setlength{\UnderLineDepth}{-0.8mm}
+\vspace{37.6mm}\hspace{0.7mm}
+\begin{tabular}{rp{\TitleWidth}}
+    题目\hspace{0.4em} & 
+    \begin{linenumbers*}
+        \internallinenumbers
+        \renewcommand\makeLineNumber
+        {
+            \hss\linenumberfont\hskip\linenumbersep
+            \tikz[remember picture,overlay]
+            \draw (0,\UnderLineDepth) -- (\TitleWidth,\UnderLineDepth);
+        }
+        \begin{centerlastline}title\end{centerlastline}
+    \end{linenumbers*} \\
+\end{tabular}
+
+\setlength\extrarowheight{2.75mm}
+\vspace{2.5mm}\hspace{8.2mm}
+\begin{tabular}{cc}
+    \makebox[4em][s]{学院}\hspace{0.2em}   & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{专业}\hspace{0.2em}   & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{班级}\hspace{0.2em}   & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{学号}\hspace{0.2em}   & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{姓名}\hspace{0.2em}   & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{指导老师}\hspace{0.2em} & \underline{\makebox[15em]{}} \\
+    \makebox[4em][s]{起讫时间}\hspace{0.2em} & \underline{\makebox[15em]{}} \\
+\end{tabular}
+
+\vspace{17.7mm}\hspace{51mm}\makebox[7em][s]{教务处印制}
 \end{document}
